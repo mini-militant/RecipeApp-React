@@ -1,10 +1,11 @@
 import React from "react"
 
+
 const Form = (props) =>{
   return(
-    <form onSubmit={props.getRecipe}>
-    <input type="text" name="recipeName" placeholder="recipe name " />
-    <button>Search</button>
+    <form onSubmit={props.getRecipe} style={{marginBottom:"2rem"}}>
+    <input className="form__input" type="text" name="recipeName" placeholder="recipe name " />
+    <button className="form__button">Search</button>
   </form>
   );
   
