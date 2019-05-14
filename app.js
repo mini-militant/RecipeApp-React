@@ -20,6 +20,7 @@ class App extends Component{
     this.setState({
       recipes:data.recipes
     })
+    console.log(this.state.recipes);
   }
 
   componentDidMount=()=>{
@@ -36,6 +37,7 @@ class App extends Component{
   }
 
    render() {
+     
     return (
       <div className="App">
         <header className="App-header">
