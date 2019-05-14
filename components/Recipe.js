@@ -1,6 +1,7 @@
 import React from "react"
+import {Link} from "react-router-dom"
 
-const API_KEY="1c78f1c16d6170949cff9f1f4d1fa09c" ;
+const API_KEY="91a91e6a73bffff78256088bda385737" ;
 
 class Recipe extends React.Component{
 
@@ -22,16 +23,19 @@ class Recipe extends React.Component{
     return(
       <div className="container">
         <div className="active-recipe">
-          <img src={this.state.activeRecipe.image_url}
+          <img className="active-recipe__img"
+            src={this.state.activeRecipe.image_url}
             alt={this.state.activeRecipe.title}/>
           <h3 className="active-recipe__title">{this.state.activeRecipe.title}</h3>
           <h4 className="active-recipe__publisher">
           Publisher: <span> {this.state.activeRecipe.publisher} </span>
           </h4>
-          <p className="active-recipe__website">
+          <p className="active-recipe__website">Website:
              <span> <a href={this.state.activeRecipe.publisher_url}>{this.state.activeRecipe.publisher_url}</a> </span>
           </p>
-          <button className="active-recipe__button">Go Home</button>
+          <button className="active-recipe__button">
+          <Link to='/'>Go Home</Link>
+          </button>
         </div>
       </div>
     );
